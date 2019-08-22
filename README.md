@@ -21,7 +21,13 @@ This tool is based on [sergio-proxy](https://github.com/supernothing/sergio-prox
 Installation
 ============
 
-Please refer to the wiki for [installation instructions](https://github.com/byt3bl33d3r/MITMf/wiki/Installation)
+# For Kali Linux
+```bash
+apt install mitmf -y
+```
+- Manual
+[![Coverage Status](https://coveralls.io/repos/byt3bl33d3r/MITMf/badge.svg?branch=master&service=github)](https://coveralls.io/github/byt3bl33d3r/MITMf?branch=master)
+
 
 Description
 ============
