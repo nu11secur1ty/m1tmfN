@@ -15,10 +15,6 @@ Quick tutorials, examples and developer updates at: https://byt3bl33d3r.github.i
 
 This tool is based on [sergio-proxy](https://github.com/supernothing/sergio-proxy) and is an attempt to revive and update the project.
 
-Contact me at:
-- Twitter: @byt3bl33d3r
-- IRC on Freenode: #MITMf
-- Email: byt3bl33d3r@protonmail.com
 
 **Before submitting issues, please read the relevant [section](https://github.com/byt3bl33d3r/MITMf/wiki/Reporting-a-bug) in the wiki .**
 
@@ -73,6 +69,11 @@ You will probably want to combine that with the **Spoof** plugin to actually int
 
 Examples
 ========
+***`nu11secur1ty`***
+```bas
+mitmf --arp --spoof --gateway 0.0.0.0 --target 0.0.0.0 -i wlan0
+```
+----------------------------------------------------------------------
 
 The most basic usage, starts the HTTP proxy SMB,DNS,HTTP servers and Net-Creds on interface enp3s0:
 
