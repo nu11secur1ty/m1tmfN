@@ -26,7 +26,7 @@ Installation
 apt install mitmf -y
 ```
 - Manual
-[![Coverage Status](https://coveralls.io/repos/byt3bl33d3r/MITMf/badge.svg?branch=master&service=github)](https://coveralls.io/github/byt3bl33d3r/MITMf?branch=master)
+[![Installation](https://github.com/nu11secur1ty/m1tmfN)](https://coveralls.io/github/byt3bl33d3r/MITMf?branch=master)
 
 
 Description
