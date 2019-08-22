@@ -26,7 +26,7 @@ Installation
 apt install mitmf -y
 ```
 ***Post insstall***
-- use the script ``
+- use the script `installbdfactory.sh`
 
 
 Description
