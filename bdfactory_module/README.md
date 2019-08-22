@@ -1,8 +1,3 @@
-
-# THE BACKDOOR FACTORY IS NO LONGER MAINTAINED OR SUPPORTED
-
-BLOG: http://secureallthethings.blogspot.com/2017/08/closing-door-end-of-backdoor-factory.html 
-
 ## The Backdoor Factory (BDF)
 
 For security professionals and researchers only.
