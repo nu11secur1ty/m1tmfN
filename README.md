@@ -21,13 +21,10 @@ This tool is based on [sergio-proxy](https://github.com/supernothing/sergio-prox
 Installation
 ============
 
-# For Kali Linux
+# For Kali Linux auto install
 ```bash
 apt install mitmf -y
 ```
-- Manual
-[![Manual Installation](https://github.com/nu11secur1ty/m1tmfN)]
-
 
 Description
 ============
