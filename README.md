@@ -25,6 +25,9 @@ Installation
 ```bash
 apt install mitmf -y
 ```
+***Post insstall***
+- use the script ``
+
 
 Description
 ============
