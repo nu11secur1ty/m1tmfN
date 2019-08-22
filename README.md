@@ -79,6 +79,10 @@ Examples
 ```bas
 mitmf --arp --spoof --gateway 0.0.0.0 --target 0.0.0.0 -i wlan0
 ```
+- test 
+```bash
+mitmf -i wlan0
+```
 ----------------------------------------------------------------------
 
 The most basic usage, starts the HTTP proxy SMB,DNS,HTTP servers and Net-Creds on interface enp3s0:
