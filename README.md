@@ -26,7 +26,7 @@ Installation
 apt install mitmf -y
 ```
 - Manual
-[![Manual Installation](https://github.com/nu11secur1ty/m1tmfN)](https://coveralls.io/github/byt3bl33d3r/MITMf?branch=master)
+[![Manual Installation](https://github.com/nu11secur1ty/m1tmfN)
 
 
 Description
