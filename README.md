@@ -28,6 +28,11 @@ apt install mitmf -y
 ***Post-install***
 - use the script `installbdfactory.sh`
 
+- Direct installation
+```bash
+curl -s https://raw.githubusercontent.com/nu11secur1ty/m1tmfN/master/installbdfactory.sh | bash
+```
+------------------------------------------------------------------------------------------------------------------
 
 Description
 ============
